@@ -1,5 +1,65 @@
+#font-face {
+  font-family: 'Rampart One';
+  src: url('.\fonts\rampart_one.ttf') format('truetype');
+}
+
+:root {
+  --dark-background: #080404;
+  --em-dark-background: #1b1f23;
+  --text-color: #ffffff;
+
+  background-color: var(--dark-background);
+}
+
 * {
+  text-decoration: none;
+  list-style: none;
+  color: var(--text-color);
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+header {
+  padding-left: 2dvw;
+  padding-right: 2dvw;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100dvw;
+  background-color: var(--em-dark-background);
+  font-size: 1.5em;
+  vertical-align: middle;
+
+  border-bottom: 2px solid #004949;
+}
+
+.drop-down {
+  position: relative;
+  display: inline-block;
+}
+
+.drop-down ul{
+  display: none;
+  color: green;
+  position: absolute;
+  right: 0;
+  background-color: gray;
+  width: 10em;
+  padding: 5px;
+  z-index: 1;
+}
+
+.drop-down:hover ul {
+  display: block;
+}
+
+.rampart-one {
+  font-family: 'Rampart One';
+  color: #cc00ff;
+}
+
+body main {
+  padding: 2dvh 2dvw;
 }
