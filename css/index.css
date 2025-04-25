@@ -3,63 +3,74 @@
   src: url('.\fonts\rampart_one.ttf') format('truetype');
 }
 
-:root {
-  --dark-background: #080404;
-  --em-dark-background: #1b1f23;
+:root
+{
   --text-color: #ffffff;
-
-  background-color: var(--dark-background);
+  --emph-text-color: #cc80ff;
+  --background-color: #0f0f0f;
+  --emph-background-color: #131313;
 }
 
-* {
+*
+{
+  list-style-type: none;
+  text-decoration-style: none;
+  padding: 0;
+  margin: 0;
   text-decoration: none;
   list-style: none;
   color: var(--text-color);
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
 }
 
-header {
-  padding-left: 2dvw;
-  padding-right: 2dvw;
+body
+{
+  background-color: var(--background-color);
+}
 
-  display: inline-flex;
-  align-items: center;
+header, header a
+{
+  display: flex;
   justify-content: space-between;
-  width: 100dvw;
-  background-color: var(--em-dark-background);
-  font-size: 1.5em;
-  vertical-align: middle;
-
-  border-bottom: 2px solid #004949;
+  align-items: center;
 }
 
-.drop-down {
-  position: relative;
-  display: inline-block;
+header
+{
+  background-color: var(--emph-background-color);
+  min-height: 3em;
+  font: 1.5em 'Rampart One';
+  padding: 0 1em;
+  text-shadow: var(--emph-text-color) 0 0 5px, var(--emph-text-color) 2px 0 5px, var(--emph-text-color) 2px 2px 5px;
+  border-bottom: solid 1px var(--emph-text-color);
 }
 
-.drop-down ul{
-  display: none;
-  color: green;
-  position: absolute;
-  right: 0;
-  background-color: gray;
-  width: 10em;
-  padding: 5px;
-  z-index: 1;
+header .left, header .center, header .right
+{
+  min-width: 33.33%;
+  display: flex;
+  align-items: center;
 }
 
-.drop-down:hover ul {
-  display: block;
+header .left
+{
+  justify-content: left;
+}
+header .center
+{
+  justify-content: center;
+}
+header .right
+{
+  justify-content: right;
+}
+header .right a
+{
+  margin-left: 10px;
+  color: white;
 }
 
-.rampart-one {
-  font-family: 'Rampart One';
-  color: #cc00ff;
-}
-
-body main {
-  padding: 2dvh 2dvw;
+header img
+{
+  height: 30px;
+  width: 30px;
 }
