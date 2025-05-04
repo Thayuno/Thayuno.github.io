@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'Rampart One';
+  src: url('../fonts/rampart_one.ttf'),
+       url('../fonts/rampart_one.eot'),
+       url('../fonts/rampart_one.svg'),
+       url('../fonts/rampart_one.woff'),
+       url('../fonts/rampart_one.woff2');
+}
+
+@font-face {
+  font-family: 'Jetbrains Nerd Font';
+  src: url(../fonts/jetbrains_nerdfont.ttf);
+}
+
+:root {
+  --fgcolor:      #ffffff;
+  --fgcolor-emph: #cc80ff;
+  --fgcolor-link: #ee6f0a;
+
+  --bgcolor:      #0f0f0f;
+  --bgcolor-emph: #131313;
+  --bgcolor-box:  #232323;
+}
+
+* {
+  font-family: 'Jetbrains Nerd Font';
+  list-style-type: none;
+  text-decoration-style: none;
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+
+  color: var(--fgcolor);
+}
+
+a { text-decoration: none; display: flex; }
+h1, h2, h3, h4, h5, h6 { font-size: 1.2em; margin: 1em; }
+.rampart { font-family: 'Rampart One'; }
+
+body
+{
+  background-color: var(--bgcolor);
+}
+
+header
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  background-color: var(--bgcolor-emph);
+  height: 4em;
+  padding: 0 20vw;
+
+  border-bottom: solid 1px var(--fgcolor-emph);
+}
+
+header a {
+  padding: .15em .5em;
+}
+
+header nav {
+  width: 20%;
+}
+
+header nav:first-child a {
+  background-color: var(--bgcolor-box);
+  border-radius: .5em;
+  transition-property: transform;
+  transition-duration: 500ms;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+    height: calc(100% + 4px);
+    width: calc(100% + 4px);
+    border-radius: .7em;
+    border: 1px solid var(--fgcolor-emph);
+  }
+  &:hover {
+    text-decoration: 1px underline wavy var(--fgcolor-emph);
+    transform: scale(1.2);
+  }
+}
+
+header nav:last-child {
+  direction: rtl;
+  & a {
+    transition-property: transform;
+    transition-duration: 500ms;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+header > a {
+  font-size: 1.5em;
+  text-shadow: var(--fgcolor-emph) 0 0 5px, var(--fgcolor-emph) 2px 0 5px, var(--fgcolor-emph) 2px 2px 5px;
+}
+
+header img {
+  height: 2em;
+  position: relative;
+
+  border: 1px solid var(--fgcolor-emph);
+  border-radius: 50%;
+  
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  border-top: 1px solid var(--fgcolor-emph);
+  text-align: center;
+  padding: 1em;
+  background-color: var(--bgcolor-emph);
+}
+
+footer p {
+  padding: .1em;
+}
