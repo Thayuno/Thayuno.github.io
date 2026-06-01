@@ -1,0 +1,26 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+
+nav ul {
+  display: flex;
+  height: calc(var(--header-height) - 10px );
+  align-items: center;
+  justify-content: center;
+  background-color: #212121;
+  margin-top: 5px;
+  padding: 0 1vw;
+  border-radius: 20px;
+}
+
+nav ul li:not(:first-child) {
+  margin-left: 1vw
+}
+
+nav a:hover {
+  text-decoration: 1px underline wavy cyan;
+}

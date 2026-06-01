@@ -2,7 +2,7 @@ nav ul li a{
   position: relative;
 }
 
-nav ul li:hover a::before, .active::before {
+nav ul li:hover a::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -12,11 +12,6 @@ nav ul li:hover a::before, .active::before {
   background-image: radial-gradient(cyan, #a31aff);
   transform: translate(-50%);
   animation: underline 0.5s ease forwards;
-}
-
-.active::before {
-    background-color: white;
-    background-image: none;
 }
 
 

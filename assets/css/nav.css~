@@ -38,9 +38,3 @@ nav ul li a {
     align-items: center;
     justify-content: center;
 }
-
-nav a {font-family: "Action Man"}
-
-.active {
-    font-style: italic;
-}
