@@ -1,0 +1,40 @@
+@import "./header.css";
+@import "./jetbrainsmono.css";
+@import "./selectors.css";
+@import "./footer.css";
+@import "./nav.css";
+@import "./animations.css";
+
+:root{
+  --fg-color: #000000;
+  --bg-color: #ffffff;
+  --header-height: 7vh;
+  --line-margin: 1.5vw;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  color: var(--fg-color);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+html {
+  background-color: var(--bg-color);
+}
+
+main {
+  padding: 1vh 2vw;
+  min-height: calc(100vh - var(--header-height))
+}
+
+@media (prefers-color-scheme: dark) {
+  :root{
+    --fg-color: #ffffff;
+    --bg-color: #000000;
+  }
+  .invert {filter: invert(100%)}
+}

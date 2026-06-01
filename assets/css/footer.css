@@ -1,0 +1,19 @@
+footer {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: var(--padding);
+  background-color: #ffffff11;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  right: var(--line-margin);
+  left: var(--line-margin);
+  top: 0;
+  border-top: 1px solid cyan;
+}

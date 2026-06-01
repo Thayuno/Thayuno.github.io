@@ -1,0 +1,42 @@
+header {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 5vw;
+  align-items: center;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: var(--line-margin);
+  right: var(--line-margin);
+  border-bottom: 1px solid cyan;
+}
+
+header a:has(img) {
+  display: block;
+  justify-self: start;
+  height: calc(var(--header-height) * .9);
+}
+
+header ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header ul li a:has(img) {
+  height: calc(var(--header-height) * .6);
+}
+
+header ul li:has(img):not(:last-child) {
+  margin-right: 0.5vw;
+}
+
+header img {
+  display: block;
+  height: 100%;
+}
